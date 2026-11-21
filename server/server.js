@@ -49,6 +49,24 @@ app.use(express.urlencoded({ extended: true, limit: '15mb' }));
 // Serve static uploaded photos
 app.use('/uploads', express.static(uploadsDir));
 
+// Root welcome & API info endpoint
+app.get('/', (req, res) => {
+  res.json({
+    name: 'CivicEye AI Backend API',
+    status: 'online',
+    version: '1.0.0',
+    description: 'AI-Powered Civic Grievance Reporting and Infrastructure Triage API',
+    endpoints: {
+      health: '/api/health',
+      auth: '/api/auth',
+      analyze: '/api/analyze',
+      complaints: '/api/complaints',
+      publicStats: '/api/complaints/public-stats'
+    },
+    frontendUrl: 'https://client-pied-six-61.vercel.app'
+  });
+});
+
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/analyze', analyzeRoutes);
