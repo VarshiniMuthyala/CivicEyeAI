@@ -23,7 +23,8 @@ import {
   User,
   Briefcase,
   HelpCircle,
-  CloudRain
+  CloudRain,
+  BarChart3
 } from 'lucide-react';
 import { complaintService } from '../services/api';
 import { useAuth } from '../context/AuthContext';
