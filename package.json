@@ -1,0 +1,10 @@
+{
+  "name": "civiceye-ai-root",
+  "version": "1.0.0",
+  "description": "CivicEye AI - AI-Powered Civic Issue Detection & Resolution Platform",
+  "scripts": {
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "test:server": "cd server && node test-suite.js"
+  }
+}
